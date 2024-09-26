@@ -12,7 +12,7 @@ A simple module to add color to Python log messages.
 
 ## Installation
 
-Binary installer is available at the [Python Package Index (PyPi)](#).
+Binary installer is available at the [Python Package Index (PyPi)](https://pypi.org/project/eazylogger/).
 
 ```bash
 pip install eazylogger
@@ -20,8 +20,7 @@ pip install eazylogger
 
 ## Logger
 
-> Parameters
-> <strong id='Logger'>Logger</strong>(<b>name</b>, <b>msg_fmt</b><i>="[%(levelname)s] - %(message)s (%(name)s)"</i>, <b>info_fmt</b><i>="%(message)s"</i>)
+<strong id='Logger'>Logger</strong>(<b>name</b>, <b>msg_fmt</b><i>="[%(levelname)s] - %(message)s (%(name)s)"</i>, <b>info_fmt</b><i>="%(message)s"</i>)
 
 Logger class with color-coded log messages.
 
