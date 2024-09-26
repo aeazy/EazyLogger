@@ -87,13 +87,13 @@ Logger class with color-coded log messages.
 
    <br>
 
-
-    <span style="color:white !important; font-weight: 100;">[DEBUG] - Example debug message (__main__)</span>
-    <span style="color:white; font-weight: 100;">Example info message</span>
-    <span style="color:yellow !important; font-weight: 100;">[WARNING] - Example warning message (__main__)</span>
-    <span style="color:red; font-weight: 100;">[ERROR] - Example error message (__main__)</span>
-    <span style="color:red; font-weight: 900;">[CRITICAL] - Example critical message (__main__)</span>
-    <span style="color:green; font-weight: 100;">Example success message</span>
-
+    <pre>
+    <span style="color:white">[DEBUG] - Example debug message (__main__)</span>
+    <span style="color:white">Example info message</span>
+    <span style="color:yellow">[WARNING] - Example warning message (__main__)</span>
+    <span style="color:red">[ERROR] - Example error message (__main__)</span>
+    <span style="color:red">[CRITICAL] - Example critical message (__main__)</span>
+    <span style="color:green">Example success message</span>
+    </pre>
 
 <h5>TESTING</h5>
