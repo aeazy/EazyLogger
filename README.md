@@ -11,7 +11,7 @@ A simple module to add color to Python log messages.
 
 ## Installation
 
-Binary installer is available at the [Python Package Index (PyPi)](#).
+Binary installer is available at the [Python Package Index (PyPi)](https://pypi.org/project/eazylogger/).
 
 ```bash
 pip install eazylogger
