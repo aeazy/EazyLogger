@@ -34,7 +34,20 @@ class Formatter:
 
 
 class Logger:
-    def __init__(self, name: str) -> None:
+    def __init__(
+        self,
+        name: str,
+        msg_fmt: str = "[%(levelname)s] - %(message)s (%(name)s)",
+        info_fmt: str = "%(message)s",
+    ) -> None:
+        """Logger class with color-coded log messages.
+
+        Args:
+            name (str): String expression representing the name of the logger class.
+            msg_fmt (str, optional): String expression representing how the debug, warning, error, and critical log messages are formatted. Defaults to "[%(levelname)s] - %(message)s (%(name)s)".
+            info_fmt (str, optional): String expression representing how the info and success messages are formatted. Defaults to "%(message)s".
+        """
+
         self.logger = logging.getLogger(name)
         self.logger.setLevel(logging.DEBUG)
 
@@ -66,6 +79,9 @@ class Logger:
         setattr(logging.getLoggerClass(), method_name, self._log_for_level)
         setattr(logging, method_name, log_to_root)
 
+    def debug(self, msg: str) -> None:
+        self.logger.debug(msg)
+
     def info(self, msg: str) -> None:
         self.logger.info(msg)
 
@@ -77,3 +93,6 @@ class Logger:
 
     def success(self, msg: str) -> None:
         self.logger.success(msg)
+
+    def critical(self, msg) -> None:
+        self.logger.critical(msg)
