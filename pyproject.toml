@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "eazylogger"
-version = "24.9.26"
+version = "24.9.27"
 authors = [
     {name="Aric Kraft"},
 ]
