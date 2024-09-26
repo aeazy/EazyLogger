@@ -82,11 +82,9 @@ Logger class with color-coded log messages.
    <br>
 
 
-    <pre style="padding:0;">
     <span style="color:white !important; font-weight: 100;">[DEBUG] - Example debug message (__main__)</span>
     <span style="color:white; font-weight: 100;">Example info message</span>
     <span style="color:yellow !important; font-weight: 100;">[WARNING] - Example warning message (__main__)</span>
     <span style="color:red; font-weight: 100;">[ERROR] - Example error message (__main__)</span>
     <span style="color:red; font-weight: 900;">[CRITICAL] - Example critical message (__main__)</span>
     <span style="color:green; font-weight: 100;">Example success message</span>
-    </pre>
