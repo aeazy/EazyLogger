@@ -19,8 +19,7 @@ pip install eazylogger
 
 ## Logger
 
-> Parameters
-> <strong id='Logger'>Logger</strong>(<b>name</b>, <b>msg_fmt</b><i>="[%(levelname)s] - %(message)s (%(name)s)"</i>, <b>info_fmt</b><i>="%(message)s"</i>)
+<strong id='Logger'>Logger</strong>(<b>name</b>, <b>msg_fmt</b><i>="[%(levelname)s] - %(message)s (%(name)s)"</i>, <b>info_fmt</b><i>="%(message)s"</i>)
 
 Logger class with color-coded log messages.
 
