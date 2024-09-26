@@ -79,7 +79,7 @@ Logger class with color-coded log messages.
     logger.success("Example success message")
    ```
 
-    <code style="display:flex;background-color:#151b23; ">
+    <code style="display:flex; ">
     <span>    
     <p style="color:white; font-weight: 100;">[DEBUG] - Example debug message (__main__)</p>
     <p style="color:white">Example info message</p>
