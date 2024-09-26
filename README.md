@@ -1,5 +1,4 @@
 # EazyLogger
-<p style='color:red'>This is some red text.</p>
 
 A simple module to add color to Python log messages.
 
