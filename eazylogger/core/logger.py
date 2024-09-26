@@ -19,12 +19,12 @@ class Formatter:
         green = "\033[0;32m"
 
         self.formats = {
-            logging.DEBUG: grey + self.msg_fmt + reset,
-            logging.INFO: grey + self.info_fmt + reset,
-            logging.WARNING: yellow + self.msg_fmt + reset,
-            logging.ERROR: red + self.msg_fmt + reset,
-            logging.CRITICAL: bold_red + self.msg_fmt + reset,
+            logging.DEBUG: grey + self.msg_fmt + reset,  # 10
+            logging.INFO: grey + self.info_fmt + reset,  # 20
             25: green + self.info_fmt + reset,  # 'logging.SUCCESS'
+            logging.WARNING: yellow + self.msg_fmt + reset,  # 30
+            logging.ERROR: red + self.msg_fmt + reset,  # 40
+            logging.CRITICAL: bold_red + self.msg_fmt + reset,  # 50
         }
 
     def format(self, record: logging.LogRecord) -> Self:
@@ -33,7 +33,7 @@ class Formatter:
         return formatter.format(record)
 
 
-class Logger:
+class Logger(Formatter):
     def __init__(
         self,
         name: str,
@@ -51,13 +51,15 @@ class Logger:
         self.logger = logging.getLogger(name)
         self.logger.setLevel(logging.DEBUG)
 
+        self.formatter = Formatter(msg_fmt, info_fmt)
+
         self._add_success_level()
         self._get_handler()
 
     def _get_handler(self) -> None:
         handler = logging.StreamHandler()
         handler.setLevel(logging.DEBUG)
-        handler.setFormatter(Formatter())
+        handler.setFormatter(self.formatter)
 
         self.logger.addHandler(handler)
 

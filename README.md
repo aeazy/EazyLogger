@@ -8,6 +8,7 @@ A simple module to add color to Python log messages.
 - [Logger](#logger)
 - [Examples:](#examples)
   - [Basic Example](#basic-example)
+  - [Using Parameters](#using-parameters)
 
 ## Installation
 
@@ -56,6 +57,8 @@ Logger class with color-coded log messages.
 ## Examples
 
 - [Basic Example](#basic-example)
+- [Using parameters](#customization):
+  - [`name`](#name-parameter)
 
 ### Basic Example
 
@@ -82,3 +85,47 @@ Logger class with color-coded log messages.
 <p align='center'>
 <img src="/assets/images/exampleOutput.png" />
 </p>
+
+### Using Parameters
+
+- #### `name`:
+
+  ```python
+  logger = Logger("customName")
+  logger.debug("Example debug message with customName")
+  ```
+
+  ```bash
+  [DEBUG] - Example debug message with customName (customName)
+  ```
+
+- #### `msg_fmt`:
+
+  - Sets the message format for `logger.debug`, `logger.warn`, `logger.error`, and `logger.critical`.
+
+  - For full list of keyword arguments see [the docs](https://docs.python.org/3/library/logging.html#logrecord-attributes)
+
+  ```python
+  logger = Logger(
+    __name__,
+    msg_fmt="%(asctime)s %(message)s [%(pathname)s]",
+  )
+  logger.debug("Example debug message with custom msg_fmt")
+  ```
+
+  ```bash
+  2000-01-01 12:00:00,000 Example debug message with custom msg_fmt [~\main.py]
+  ```
+
+- #### `info_fmt`
+  - Sets the message format for `logger.info` and `logger.success`.
+  ```python
+  logger = Logger(
+    __name__,
+    info_fmt="[%(levelname)s] - %(message)s (%(name)s)",
+  )
+  logger.info("Example info message with custom info_fmt")
+  ```
+  ```bash
+  [INFO] - Example info message with custom info_fmt (__main__)
+  ```

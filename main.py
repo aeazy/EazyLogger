@@ -3,11 +3,9 @@
 
 from eazylogger import Logger
 
-logger = Logger(__name__)
+logger = Logger(
+    __name__,
+    info_fmt="[%(levelname)s] - %(message)s (%(name)s)",
+)
 
-logger.debug("Example debug message")
-logger.info("Example info message")
-logger.warn("Example warning message")
-logger.error("Example error message")
-logger.critical("Example critical message")
-logger.success("Example success message")
+logger.info("Example debug with custom info_fmt")
