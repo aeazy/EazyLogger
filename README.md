@@ -88,3 +88,6 @@ Logger class with color-coded log messages.
     <span style="color:red; font-weight: 100;">[ERROR] - Example error message (__main__)</span>
     <span style="color:red; font-weight: 900;">[CRITICAL] - Example critical message (__main__)</span>
     <span style="color:green; font-weight: 100;">Example success message</span>
+
+
+<h5>TESTING</h5>
